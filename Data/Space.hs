@@ -70,7 +70,7 @@ insert space key value = go space key value (drive key) 0 where
             MContainer count elements -> do
                 let append = do
                     MV.unsafeWrite elements count (Element key value)
-                    MV.unsafeWrite spaces index (MContainer (count+1) elements) 
+                    MV.unsafeWrite spaces index (MContainer (count+1) elements)
                 let split = do
                     newSpace (branches key) (MV.length elements) >>= MV.unsafeWrite spaces index
                     forM_ [0..count-1] $ \ i -> do

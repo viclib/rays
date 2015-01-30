@@ -1,5 +1,7 @@
 {-# LANGUAGE TypeFamilies, Rank2Types, FlexibleInstances, LambdaCase, TupleSections, DeriveGeneric #-}
 
+-- Generic space partitioning trees, used as base for quadtrees and octrees on geometry.hs.
+
 module Data.Space where
 
 import Prelude hiding (foldr1,sum,foldr,mapM_)
